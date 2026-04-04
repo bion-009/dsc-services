@@ -1,231 +1,736 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DSC WALE DIGITAL SOLUTIONS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSC WALE DIGITAL SOLUTIONS | Premium DSC Services</title>
+    <meta name="description" content="Fast, secure, and trusted Digital Signature Certificate solutions in Dwarahat, Uttarakhand. Get your DSC same day.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0A2540',
+                        secondary: '#EAF2FF',
+                        accent: '#25D366',
+                        bgLight: '#F5F7FA',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        soft: '0 4px 20px rgba(10, 37, 64, 0.05)',
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 3s infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'marquee': 'marquee 30s linear infinite',
+                        'spin-slow': 'spin 8s linear infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
-<style>
-body {margin:0;font-family:Arial;background:#f5f7fa;color:#333;}
-.container {width:90%;max-width:1100px;margin:auto;}
-
-header {
-    background: linear-gradient(rgba(10,37,64,0.85), rgba(10,37,64,0.85)),
-    url('https://images.unsplash.com/photo-1555949963-aa79dcee981c');
-    background-size: cover;
-    background-position: center;
-    color:white;
-    text-align:center;
-    padding:80px 20px;
-}
-
-.logo {width:90px;margin-bottom:10px;}
-
-h1 {margin:0;font-size:32px;}
-.tag {font-size:18px;margin-top:8px;}
-.highlight {font-size:16px;margin-top:10px;}
-
-.badge {
-    background:#28a745;
-    padding:8px 15px;
-    border-radius:20px;
-    display:inline-block;
-    margin-top:15px;
-}
-
-.btn {
-    display:inline-block;
-    margin:10px;
-    padding:12px 25px;
-    border-radius:5px;
-    text-decoration:none;
-    font-weight:bold;
-}
-.btn-primary {background:#007bff;color:white;}
-.btn-whatsapp {background:#25D366;color:white;}
-
-.section {padding:50px 0;text-align:center;}
-
-.services {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-.card {
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 3px 12px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-.card:hover {transform:translateY(-5px);}
-
-.card img {margin-bottom:10px;}
-
-.counter {
-    font-size:34px;
-    font-weight:bold;
-    color:#007bff;
-    margin:20px 0;
-}
-
-.form-box {
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    max-width:400px;
-    margin:auto;
-    box-shadow:0 3px 12px rgba(0,0,0,0.1);
-}
-
-input,select {
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border:1px solid #ccc;
-    border-radius:5px;
-}
-
-.footer {
-    background:#0a2540;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-.whatsapp-float {
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:15px;
-    border-radius:50%;
-    font-size:20px;
-    text-decoration:none;
-}
-</style>
+    <style>
+        * {
+            transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        body {
+            background-color: #F5F7FA;
+            color: #0A2540;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .selection-blue::selection {
+            background-color: #EAF2FF;
+            color: #0A2540;
+        }
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        /* Custom animations for the "motion" feel */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .scale-in {
+            animation: scaleIn 0.8s ease-out forwards;
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .btn-hover-effect {
+            transition: all 0.3s ease;
+        }
+        .btn-hover-effect:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+        }
+        .card-hover-effect {
+            transition: all 0.3s ease;
+        }
+        .card-hover-effect:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(10, 37, 64, 0.1);
+        }
+    </style>
 </head>
+<body class="selection-blue scroll-smooth">
 
-<body>
-
-<header>
-    <img src="logo.png" class="logo">
-    <h1>DSC WALE DIGITAL SOLUTIONS</h1>
-    <p class="tag">Fast. Secure. Trusted DSC Solutions.</p>
-    <p class="highlight">Apply Digital Signature Certificate in Minutes</p>
-    <div class="badge">⚡ Instant Approval Available</div>
-
-    <br>
-    <a href="https://wa.me/919760735619?text=Hello%2C%20I%20need%20Digital%20Signature%20Certificate" class="btn btn-whatsapp">WhatsApp Now</a>
-</header>
-
-<section class="section">
-    <div class="container">
-        <h2>Our Services</h2>
-        <div class="services">
-
-            <div class="card">
-                <img src="https://img.icons8.com/color/96/signature.png" width="60">
-                <h3>Class 3 DSC (Individual)</h3>
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3 group cursor-pointer">
+                <img src="/logo.png" alt="DSC WALE Logo" class="h-12 w-auto group-hover:rotate-[360deg] transition-transform duration-1000">
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold tracking-tight">DSC WALE</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] font-medium opacity-60 -mt-1">Digital Solutions</span>
+                </div>
             </div>
-
-            <div class="card">
-                <img src="https://img.icons8.com/color/96/company.png" width="60">
-                <h3>Class 3 DSC (Company)</h3>
-            </div>
-
-            <div class="card">
-                <img src="https://img.icons8.com/color/96/renew-subscription.png" width="60">
-                <h3>DSC Renewal</h3>
-            </div>
-
-            <div class="card">
-                <img src="proxkey.png" width="60">
-                <h3>USB Token (ProxKey)</h3>
-            </div>
-
+            <a href="https://wa.me/919760735619" class="hidden md:flex items-center gap-2 bg-primary text-white px-6 py-2.5 rounded-full font-semibold text-sm btn-hover-effect shadow-soft">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-11.7 8.38 8.38 0 0 1 3.8.9L21 3z"></path></svg>
+                WhatsApp Support
+            </a>
         </div>
-    </div>
-</section>
+    </nav>
 
-<section class="section" style="background:#e9f2ff;">
-    <div class="container">
-        <h2>Why Choose Us</h2>
-        <div class="counter">500+ DSC Delivered</div>
+    <!-- Hero Section -->
+    <section class="pt-40 pb-0 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center mb-20">
+            <div class="fade-in-up">
+                <div class="flex items-center gap-3 mb-8 group cursor-pointer">
+                    <img src="/logo.png" alt="DSC WALE" class="h-10 w-auto group-hover:rotate-12 transition-transform">
+                    <div class="h-8 w-[1px] bg-gray-200"></div>
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] opacity-40">Digital Solutions</span>
+                </div>
+                <div class="inline-flex items-center gap-2 bg-secondary text-primary px-4 py-1.5 rounded-full text-xs font-bold mb-6 uppercase tracking-wider">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                    Fast. Secure. Trusted.
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight mb-6 max-w-[800px]">
+                    Get <span id="rotating-text" class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400 transition-opacity duration-500">Digital Signature Certificate</span> Done Quickly & Professionally
+                </h1>
+                <p class="text-lg md:text-xl text-gray-500 font-medium mb-8 max-w-[550px] leading-[1.5]">
+                    Fast-track your GST, Income Tax & Business filings with expert DSC support. No hassle. No delay.
+                </p>
+                
+                <div class="space-y-3 mb-10">
+                    <div class="flex items-center gap-2 text-sm font-semibold text-primary/80">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Govt & CA Trusted Service
+                    </div>
+                    <div class="flex items-center gap-2 text-sm font-semibold text-primary/80">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Same Day Activation Guaranteed
+                    </div>
+                    <div class="flex items-center gap-2 text-sm font-bold text-red-500/90 animate-pulse">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                        Limited same-day slots available
+                    </div>
+                </div>
+                
+                <div class="flex flex-col gap-6 mb-12">
+                    <div class="flex flex-col sm:flex-row items-center gap-6">
+                        <a href="https://wa.me/919760735619" class="w-full sm:w-auto flex items-center justify-center gap-3 bg-accent text-white px-10 py-5 rounded-full font-bold text-lg btn-hover-effect active:scale-[0.98] min-h-[56px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-11.7 8.38 8.38 0 0 1 3.8.9L21 3z"></path></svg>
+                            Get DSC on WhatsApp Now
+                        </a>
+                        <div class="flex items-center gap-2 text-lg font-bold text-primary">
+                            <span class="text-2xl">⭐</span>
+                            <div class="flex flex-col leading-tight">
+                                <span>500+ DSC Delivered</span>
+                                <span class="text-xs font-medium text-gray-500 uppercase tracking-widest">Trusted by Professionals</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm font-semibold text-red-500/80 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Limited same-day slots available
+                    </p>
+                </div>
 
-        <p>✔ 100% Genuine DSC</p>
-        <p>✔ Instant Support Available</p>
-        <p>✔ Expert Guidance</p>
-        <p>✔ Same Day Delivery</p>
-        <p>✔ Experience: 6 Months</p>
-    </div>
-</section>
+                <div class="grid grid-cols-3 gap-6 border-t border-gray-100 pt-8">
+                    <div>
+                        <p class="font-bold text-xl">Same Day</p>
+                        <p class="text-xs text-gray-500 uppercase tracking-wider">DSC Delivery</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-xl">Instant</p>
+                        <p class="text-xs text-gray-500 uppercase tracking-wider">WhatsApp Support</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-xl">100%</p>
+                        <p class="text-xs text-gray-500 uppercase tracking-wider">Genuine Service</p>
+                    </div>
+                </div>
+            </div>
 
-<section class="section">
-    <div class="container">
-        <h2>Required Documents</h2>
-        <p>Aadhaar Card | PAN Card | Email ID | Mobile Number</p>
-    </div>
-</section>
+            <div class="relative scale-in group" style="animation-delay: 0.2s;">
+                <div class="aspect-square rounded-[40px] bg-gradient-to-br from-secondary to-white shadow-soft p-8 flex items-center justify-center group-hover:-translate-y-2 transition-transform duration-500">
+                    <div class="relative w-full max-w-sm aspect-square bg-white/80 backdrop-blur-xl rounded-[32px] shadow-2xl flex flex-col items-center justify-center p-12 overflow-hidden border border-white/50">
+                        <!-- Decorative Background -->
+                        <div class="absolute -top-10 -right-10 w-40 h-40 bg-blue-50/50 rounded-full blur-2xl"></div>
+                        <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-green-50/50 rounded-full blur-2xl"></div>
+                        
+                        <!-- Central Brand Identity -->
+                        <div class="relative z-10 mb-10 w-full flex flex-col items-center">
+                            <div class="p-8 bg-white rounded-[40px] shadow-soft border border-gray-50 mb-6 group-hover:scale-105 transition-transform duration-500">
+                                <img src="/logo.png" alt="DSC WALE Logo" class="w-44 h-auto">
+                            </div>
+                            <div class="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Same Day Approved
+                            </div>
+                            <span class="text-[10px] uppercase tracking-[0.5em] font-bold text-gray-400">Verified DSC Provider</span>
+                        </div>
 
-<section class="section">
-    <div class="container">
-        <h2>Get ProxKey USB Token</h2>
-        <img src="proxkey.png" width="180">
-        <p>Get Genuine ProxKey Token with Full Support</p>
+                        <!-- Trust Badge -->
+                        <div class="relative z-10 flex items-center gap-4 bg-white px-6 py-4 rounded-2xl border border-gray-100 shadow-sm">
+                            <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent animate-spin-slow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400 leading-none mb-1">Security First</span>
+                                <span class="text-base font-bold text-primary">Class 3 DSC Services</span>
+                            </div>
+                        </div>
 
-        <a href="https://wa.me/919760735619?text=Hello%2C%20I%20want%20ProxKey%20Token" class="btn btn-whatsapp">Order Now</a>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2>Apply for DSC</h2>
-
-        <div class="form-box">
-            <input type="text" id="name" placeholder="Your Name">
-            <input type="tel" id="mobile" placeholder="Mobile Number">
-
-            <select id="service">
-                <option>Select Service</option>
-                <option>Class 3 DSC Individual</option>
-                <option>Class 3 DSC Company</option>
-                <option>DSC Renewal</option>
-                <option>ProxKey Token</option>
-            </select>
-
-            <button class="btn btn-primary" onclick="sendWhatsApp()">Submit</button>
+                        <!-- Security Indicator -->
+                        <div class="absolute bottom-6 flex items-center gap-2 opacity-50">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                            <span class="text-[8px] font-bold uppercase tracking-widest">End-to-End Secure Process</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+        
+        <!-- Scrolling Marquee -->
+        <div class="w-full overflow-hidden bg-bgLight py-8 border-y border-gray-100">
+            <div class="flex animate-marquee whitespace-nowrap gap-16 items-center">
+                <span class="text-sm font-bold uppercase tracking-[0.3em] opacity-30">Trusted by 500+ Professionals</span>
+                <span class="text-sm font-bold uppercase tracking-[0.3em] opacity-30">Govt Approved Provider</span>
+                <span class="text-sm font-bold uppercase tracking-[0.3em] opacity-30">Same Day DSC Issuance</span>
+                <span class="text-sm font-bold uppercase tracking-[0.3em] opacity-30">FIPS Certified Tokens</span>
+                <span class="text-sm font-bold uppercase tracking-[0.3em] opacity-30">CCA Licensed Partner</span>
+                <span class="text-sm font-bold uppercase tracking-[0.3em] opacity-30">Trusted by 500+ Professionals</span>
+                <span class="text-sm font-bold uppercase tracking-[0.3em] opacity-30">Govt Approved Provider</span>
+                <span class="text-sm font-bold uppercase tracking-[0.3em] opacity-30">Same Day DSC Issuance</span>
+                <span class="text-sm font-bold uppercase tracking-[0.3em] opacity-30">FIPS Certified Tokens</span>
+                <span class="text-sm font-bold uppercase tracking-[0.3em] opacity-30">CCA Licensed Partner</span>
+            </div>
+        </div>
+    </section>
 
-<section class="section" style="background:#0a2540;color:white;">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <p>Dwarahat, Uttarakhand</p>
-        <p>Time: 09:00 AM - 06:00 PM</p>
-        <p>Email: dscwale.itservices@gmail.com</p>
-    </div>
-</section>
+    <!-- Services Section -->
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Our Services</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Comprehensive digital solutions for all your business and personal needs.</p>
+            </div>
 
-<div class="footer">
-    <p>© 2026 DSC WALE DIGITAL SOLUTIONS</p>
-</div>
+            <!-- Category 1: DSC Services -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm">1</span>
+                    DSC Services
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <a href="https://wa.me/919760735619?text=I%20want%20to%20apply%20for%20Class%203%20DSC%20(Individual)" class="block p-8 rounded-3xl bg-bgLight border border-gray-100 shadow-soft card-hover-effect group">
+                        <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center mb-6 shadow-soft group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Class 3 DSC (Individual)</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4">For personal ITR and individual filings.</p>
+                        <span class="text-blue-600 font-bold text-sm flex items-center gap-2">Apply Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                    </a>
+                    <a href="https://wa.me/919760735619?text=I%20want%20to%20apply%20for%20Class%203%20DSC%20(Company)" class="block p-8 rounded-3xl bg-bgLight border border-gray-100 shadow-soft card-hover-effect group">
+                        <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center mb-6 shadow-soft group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Class 3 DSC (Company)</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4">For GST, MCA, and corporate tenders.</p>
+                        <span class="text-blue-600 font-bold text-sm flex items-center gap-2">Apply Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                    </a>
+                    <a href="https://wa.me/919760735619?text=I%20want%20to%20renew%20my%20DSC" class="block p-8 rounded-3xl bg-bgLight border border-gray-100 shadow-soft card-hover-effect group">
+                        <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center mb-6 shadow-soft group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">DSC Renewal</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4">Quick renewal of your existing DSC.</p>
+                        <span class="text-blue-600 font-bold text-sm flex items-center gap-2">Apply Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                    </a>
+                    <a href="https://wa.me/919760735619?text=I%20want%20to%20order%20ProxKey%20Token" class="block p-8 rounded-3xl bg-bgLight border border-gray-100 shadow-soft card-hover-effect group">
+                        <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center mb-6 shadow-soft group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="2" ry="2"></rect><path d="M6 12h4"></path><path d="M14 12h4"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">ProxKey Token</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4">FIPS certified secure USB tokens.</p>
+                        <span class="text-blue-600 font-bold text-sm flex items-center gap-2">Apply Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                    </a>
+                </div>
+            </div>
 
-<a href="https://wa.me/919760735619?text=Hello%2C%20I%20need%20Digital%20Signature%20Certificate" class="whatsapp-float">💬</a>
+            <!-- Category 2: Tax & Registration -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white text-sm">2</span>
+                    Tax & Registration
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <a href="https://wa.me/919760735619?text=I%20want%20to%20apply%20for%20ITR%20Filing" class="block p-8 rounded-3xl bg-bgLight border border-gray-100 shadow-soft card-hover-effect group">
+                        <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center mb-6 shadow-soft group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">ITR Filing</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4">Expert Income Tax Return filing services.</p>
+                        <span class="text-blue-600 font-bold text-sm flex items-center gap-2">Apply Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                    </a>
+                    <a href="https://wa.me/919760735619?text=I%20want%20to%20apply%20for%20GST%20Registration" class="block p-8 rounded-3xl bg-bgLight border border-gray-100 shadow-soft card-hover-effect group">
+                        <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center mb-6 shadow-soft group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">GST Registration</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4">New GST registration and monthly returns.</p>
+                        <span class="text-blue-600 font-bold text-sm flex items-center gap-2">Apply Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                    </a>
+                    <a href="https://wa.me/919760735619?text=I%20want%20to%20apply%20for%20MSME%20Registration" class="block p-8 rounded-3xl bg-bgLight border border-gray-100 shadow-soft card-hover-effect group">
+                        <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center mb-6 shadow-soft group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">MSME Registration</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4">Udyam registration for small businesses.</p>
+                        <span class="text-blue-600 font-bold text-sm flex items-center gap-2">Apply Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                    </a>
+                </div>
+            </div>
 
-<script>
-function sendWhatsApp(){
-let name=document.getElementById("name").value;
-let mobile=document.getElementById("mobile").value;
-let service=document.getElementById("service").value;
+            <!-- Category 3: Business Digital Services -->
+            <div>
+                <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-yellow-500 rounded-lg flex items-center justify-center text-white text-sm">3</span>
+                    Business Digital Services
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <a href="https://wa.me/919760735619?text=I%20want%20a%20Professional%20Business%20Landing%20Page" class="block p-8 rounded-3xl bg-bgLight border border-gray-100 shadow-soft card-hover-effect group">
+                        <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center mb-6 shadow-soft group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Professional Business Landing Page</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4">Get a professional business landing page that converts visitors into customers.</p>
+                        <span class="text-blue-600 font-bold text-sm flex items-center gap-2">Apply Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                    </a>
+                    <a href="https://wa.me/919760735619?text=I%20need%20help%20with%20Online%20Form%20Filling" class="block p-8 rounded-3xl bg-bgLight border border-gray-100 shadow-soft card-hover-effect group">
+                        <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center mb-6 shadow-soft group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Online Form Filling</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4">All types of government and exam form filling.</p>
+                        <span class="text-blue-600 font-bold text-sm flex items-center gap-2">Apply Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                    </a>
+                    <a href="https://wa.me/919760735619?text=I%20need%20help%20with%20Online%20Work" class="block p-8 rounded-3xl bg-bgLight border border-gray-100 shadow-soft card-hover-effect group">
+                        <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center mb-6 shadow-soft group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">All Types of Online Work</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4">Fast and reliable digital services of all kinds.</p>
+                        <span class="text-blue-600 font-bold text-sm flex items-center gap-2">Apply Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                    </a>
+                </div>
+                <div class="mt-16 text-center">
+                    <a href="https://wa.me/919760735619?text=I%20want%20to%20start%20my%20DSC%20process" class="inline-flex items-center justify-center gap-3 bg-accent text-white px-10 py-5 rounded-full font-bold text-lg btn-hover-effect active:scale-[0.98]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-11.7 8.38 8.38 0 0 1 3.8.9L21 3z"></path></svg>
+                        Start Your DSC Process
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-let msg=`Hello, I need DSC\nName: ${name}\nMobile: ${mobile}\nService: ${service}`;
-window.open(`https://wa.me/919760735619?text=${encodeURIComponent(msg)}`,'_blank');
-}
-</script>
+    <!-- Trust Section -->
+    <section class="py-24 px-6">
+        <div class="max-w-7xl mx-auto bg-primary rounded-[40px] p-12 md:p-20 text-white overflow-hidden relative">
+            <div class="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-6xl font-bold mb-8">500+ DSC Delivered with 100% Trust.</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <span class="text-lg font-medium opacity-90">100% Genuine & CCA Approved</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <span class="text-lg font-medium opacity-90">Expert Support for Installation</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <span class="text-lg font-medium opacity-90">Same Day Processing & Delivery</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <span class="text-lg font-medium opacity-90">Secure & Confidential Handling</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/919760735619?text=I%20want%20to%20get%20my%20DSC%20now" class="inline-flex items-center gap-3 bg-accent text-primary px-8 py-4 rounded-2xl font-bold text-lg mt-10 btn-hover-effect">
+                        Get Your DSC Now
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-white/10 backdrop-blur-lg p-8 rounded-3xl border border-white/10">
+                        <p class="text-4xl font-bold mb-2">500+</p>
+                        <p class="text-sm uppercase tracking-widest opacity-60">Happy Clients</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-lg p-8 rounded-3xl border border-white/10">
+                        <p class="text-4xl font-bold mb-2">100%</p>
+                        <p class="text-sm uppercase tracking-widest opacity-60">Success Rate</p>
+                    </div>
+                    <div class="col-span-2 bg-accent p-8 rounded-3xl text-primary">
+                        <p class="text-2xl font-bold mb-4">Serving Professionals</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <div class="flex items-center gap-2 font-medium">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Advocates & Professionals
+                            </div>
+                            <div class="flex items-center gap-2 font-medium">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Business Owners
+                            </div>
+                            <div class="flex items-center gap-2 font-medium">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Government Contractors
+                            </div>
+                            <div class="flex items-center gap-2 font-medium">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Individuals & Freelancers
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/20 blur-[100px] -mr-48 -mt-48 rounded-full"></div>
+        </div>
+    </section>
 
+    <!-- Mid-Page Conversion Hook -->
+    <section class="py-12 px-6 bg-secondary/30">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+            <h3 class="text-2xl md:text-3xl font-bold text-primary">Ready to get your DSC today?</h3>
+            <a href="https://wa.me/919760735619" class="w-full md:w-auto flex items-center justify-center gap-3 bg-primary text-white px-10 py-5 rounded-full font-bold text-lg btn-hover-effect">
+                Apply on WhatsApp Now
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-11.7 8.38 8.38 0 0 1 3.8.9L21 3z"></path></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Who Needs Section -->
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-8">Who Needs a Digital Signature?</h2>
+                    <div class="grid gap-4">
+                        <div class="p-6 rounded-2xl bg-bgLight hover:bg-secondary transition-colors cursor-default">
+                            <h3 class="font-bold text-lg mb-1">CA & Professionals</h3>
+                            <p class="text-gray-500 text-sm">For filing ITR, Audit reports, and MCA forms.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-bgLight hover:bg-secondary transition-colors cursor-default">
+                            <h3 class="font-bold text-lg mb-1">Business Owners</h3>
+                            <p class="text-gray-500 text-sm">For GST registration and company incorporation.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-bgLight hover:bg-secondary transition-colors cursor-default">
+                            <h3 class="font-bold text-lg mb-1">Individual Applicants</h3>
+                            <p class="text-gray-500 text-sm">For personal income tax filing and e-verification.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-bgLight hover:bg-secondary transition-colors cursor-default">
+                            <h3 class="font-bold text-lg mb-1">Government Contractors</h3>
+                            <p class="text-gray-500 text-sm">Essential for e-Tendering and bidding.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-secondary rounded-[40px] p-12 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold mb-6">Required Documents</h3>
+                    <p class="text-gray-600 mb-8">Keep these ready for instant processing:</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-soft">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="m9 15 2 2 4-4"></path></svg>
+                            <span class="font-semibold">PAN Card</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-soft">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="m9 15 2 2 4-4"></path></svg>
+                            <span class="font-semibold">Aadhaar Card</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-soft">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="m9 15 2 2 4-4"></path></svg>
+                            <span class="font-semibold">Mobile Number (Aadhaar Linked)</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-soft">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="m9 15 2 2 4-4"></path></svg>
+                            <span class="font-semibold">Email Address</span>
+                        </div>
+                    </div>
+                    <div class="mt-10 p-6 bg-white rounded-2xl border border-blue-100 shadow-soft">
+                        <p class="text-lg font-bold text-primary mb-4">Have your documents ready?</p>
+                        <a href="https://wa.me/919760735619?text=I%20have%20my%20documents%20ready.%20I%20want%20to%20start%20my%20DSC%20process." class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-4 transition-all">
+                            Start your DSC process now
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                    <p class="mt-8 text-xs text-gray-400 italic">* Paperless process available for Aadhaar-linked mobile users.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section class="py-24 px-6">
+        <div class="max-w-7xl mx-auto glass rounded-[40px] p-12 md:p-20 flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1">
+                <div class="inline-block bg-primary text-white px-4 py-1 rounded-full text-xs font-bold mb-4">FEATURED PRODUCT</div>
+                <h2 class="text-4xl font-bold mb-6">ProxKey USB Token</h2>
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-center gap-3 text-gray-700 font-medium">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Mandatory for DSC usage
+                    </div>
+                    <div class="flex items-center gap-3 text-gray-700 font-medium">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Compatible with all systems
+                    </div>
+                    <div class="flex items-center gap-3 text-gray-700 font-medium">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Instant setup support
+                    </div>
+                </div>
+                <a href="https://wa.me/919760735619?text=I'm%20interested%20in%20ProxKey%20Token%20with%20DSC" class="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-2xl font-bold btn-hover-effect">
+                    Order ProxKey with DSC
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+            </div>
+            <div class="flex-1 flex justify-center">
+                <div class="relative w-full max-w-lg">
+                    <div class="absolute inset-0 bg-blue-500/10 blur-3xl rounded-full"></div>
+                    <img src="/proxkey.png" alt="ProxKey Token" class="relative z-10 rounded-[40px] shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Section (WhatsApp CTA Block) -->
+    <section class="py-24 px-6 bg-white" id="contact">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Get Started Today</h2>
+            <p class="text-gray-500 mb-12 text-lg">Skip the forms. Chat with our experts directly on WhatsApp for instant DSC issuance.</p>
+            
+            <div class="bg-bgLight p-10 md:p-16 rounded-[50px] shadow-soft border border-gray-100 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-accent/5 blur-3xl rounded-full -mr-32 -mt-32"></div>
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/5 blur-3xl rounded-full -ml-32 -mb-32"></div>
+                
+                <div class="relative z-10 flex flex-col items-center">
+                    <div class="w-20 h-20 bg-accent text-white rounded-3xl flex items-center justify-center shadow-lg mb-8 animate-bounce-slow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-11.7 8.38 8.38 0 0 1 3.8.9L21 3z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4 text-primary">Select Your Service</h3>
+                    <p class="text-gray-500 mb-8 max-w-md mx-auto">Choose a service below to start your application directly on WhatsApp.</p>
+                    
+                    <div class="w-full max-w-md mb-10">
+                        <select id="service-select" class="w-full px-6 py-4 rounded-2xl border border-gray-200 bg-white text-primary font-bold text-lg focus:outline-none focus:ring-2 focus:ring-accent/50 appearance-none cursor-pointer shadow-sm">
+                            <option value="Digital Signature Certificate">Digital Signature Certificate</option>
+                            <option value="Class 3 Company DSC">Class 3 Company DSC</option>
+                            <option value="DSC Renewal & Support">DSC Renewal & Support</option>
+                            <option value="ProxKey USB Token Setup">ProxKey USB Token Setup</option>
+                            <option value="GST Registration & Filing">GST Registration & Filing</option>
+                            <option value="Income Tax Return Filing">Income Tax Return Filing</option>
+                            <option value="MSME Udyam Registration">MSME Udyam Registration</option>
+                            <option value="Professional Business Website">Professional Business Website</option>
+                            <option value="All Types of Online Services">All Types of Online Services</option>
+                        </select>
+                    </div>
+
+                    <a id="whatsapp-cta" href="https://wa.me/919760735619?text=Hi,%20I%20want%20to%20apply%20for%20a%20Digital%20Signature%20Certificate." class="w-full sm:w-auto flex items-center justify-center gap-4 bg-accent text-white px-12 py-6 rounded-full font-bold text-xl btn-hover-effect">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-11.7 8.38 8.38 0 0 1 3.8.9L21 3z"></path></svg>
+                        Apply Now on WhatsApp
+                    </a>
+                    
+                    <div class="mt-10 flex flex-wrap justify-center gap-8 opacity-60">
+                        <div class="flex items-center gap-2 text-sm font-bold uppercase tracking-widest">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Fast Approval
+                        </div>
+                        <div class="flex items-center gap-2 text-sm font-bold uppercase tracking-widest">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Expert Help
+                        </div>
+                        <div class="flex items-center gap-2 text-sm font-bold uppercase tracking-widest">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Secure Process
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-24 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
+            <div class="space-y-12">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-8 text-primary">Visit Our Office</h2>
+                    <div class="space-y-8">
+                        <div class="flex gap-6">
+                            <div class="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0A2540" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div>
+                                <p class="font-bold text-lg mb-1">Our Location</p>
+                                <p class="text-gray-500">Dwarahat, Almora, Uttarakhand, India - 263653</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0A2540" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            </div>
+                            <div>
+                                <p class="font-bold text-lg mb-1">Working Hours</p>
+                                <p class="text-gray-500">Mon - Sat: 10:00 AM - 07:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0A2540" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                            </div>
+                            <div>
+                                <p class="font-bold text-lg mb-1">Email Us</p>
+                                <p class="text-gray-500">support@dscwale.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h-[400px] rounded-[40px] overflow-hidden shadow-soft border border-gray-100">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13813.43444345334!2d79.4262!3d29.7842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0989f6b9b9b9b%3A0x9b9b9b9b9b9b9b9b!2sDwarahat%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-gray-100 bg-white">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <img src="/logo.png" alt="DSC WALE Logo" class="h-12 w-auto">
+                <div class="flex flex-col items-center md:items-start">
+                    <span class="text-xl font-bold tracking-tight">DSC WALE</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] font-medium opacity-60 -mt-1">Digital Solutions</span>
+                </div>
+            </div>
+            <p class="text-gray-400 text-sm">© 2026 DSC WALE DIGITAL SOLUTIONS. All rights reserved.</p>
+            <div class="flex gap-8 text-sm font-medium text-gray-500">
+                <a href="/privacy.html" class="hover:text-primary transition-colors">Privacy Policy</a>
+                <a href="/terms.html" class="hover:text-primary transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919760735619" class="fixed bottom-8 right-8 z-50 w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center shadow-2xl btn-hover-effect animate-pulse-slow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-11.7 8.38 8.38 0 0 1 3.8.9L21 3z"></path></svg>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Text Rotator
+        const words = [
+            "Digital Signature Certificate",
+            "Class 3 Company DSC",
+            "DSC Renewal & Support",
+            "ProxKey USB Token Setup",
+            "GST Registration & Filing",
+            "Income Tax Return Filing",
+            "MSME Udyam Registration",
+            "Professional Business Website",
+            "All Types of Online Services"
+        ];
+        let wordIndex = 0;
+        const rotatingText = document.getElementById('rotating-text');
+
+        if (rotatingText) {
+            setInterval(() => {
+                rotatingText.style.opacity = '0';
+                setTimeout(() => {
+                    wordIndex = (wordIndex + 1) % words.length;
+                    rotatingText.textContent = words[wordIndex];
+                    rotatingText.style.opacity = '1';
+                }, 500);
+            }, 5000);
+        }
+
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Apply to sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = "0";
+            observer.observe(section);
+        });
+
+        // Service Selection Logic
+        const serviceSelect = document.getElementById('service-select');
+        const whatsappCta = document.getElementById('whatsapp-cta');
+
+        if (serviceSelect && whatsappCta) {
+            serviceSelect.addEventListener('change', (e) => {
+                const selectedService = e.target.value;
+                const encodedMessage = encodeURIComponent(`Hi, I want to apply for ${selectedService}. Please guide me on the process.`);
+                whatsappCta.href = `https://wa.me/919760735619?text=${encodedMessage}`;
+            });
+        }
+    </script>
 </body>
 </html>
